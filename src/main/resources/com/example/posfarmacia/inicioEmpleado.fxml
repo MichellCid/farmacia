@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="518.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.InicioEmpleadoController">
+   <children>
+      <Pane prefHeight="33.0" prefWidth="899.0" style="-fx-background-color: #73c6b6;">
+         <children>
+            <Label fx:id="horaFechaEm" layoutX="69.0" layoutY="11.0" text="Label" />
+            <Button fx:id="cerrarSesionEm" layoutX="800.0" layoutY="4.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Cerrar sesión" textFill="#f8f8f8" />
+            <Label fx:id="usuarioEm" layoutX="724.0" layoutY="8.0" text="Label" />
+         </children>
+      </Pane>
+      <ButtonBar layoutY="35.0" prefHeight="40.0" prefWidth="899.0" style="-fx-background-color: a2d9ce;">
+        <buttons>
+          <Button fx:id="ventasEm" mnemonicParsing="false" text="Ventas" />
+            <Button fx:id="productosEm" mnemonicParsing="false" text="Productos" />
+            <Button fx:id="inventarioEm" mnemonicParsing="false" text="Inventario" />
+            <Button fx:id="comprasEm" mnemonicParsing="false" text="Compras" />
+            <Button fx:id="corteEm" mnemonicParsing="false" text="Corte" />
+            <Button fx:id="facturasEm" mnemonicParsing="false" text="Facturas" />
+            <Button fx:id="configEm" mnemonicParsing="false" text="Configuración" />
+        </buttons>
+      </ButtonBar>
+      <Pane fx:id="contenedorPantallasEm" layoutY="75.0" prefHeight="444.0" prefWidth="899.0" />
+   </children>
+</AnchorPane>

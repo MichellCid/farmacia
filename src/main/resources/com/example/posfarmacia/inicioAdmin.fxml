@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="518.0" prefWidth="842.0" style="-fx-background-color: 73c6b6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.InicioAdminController">
+   <children>
+      <ButtonBar layoutY="35.0" prefHeight="40.0" prefWidth="899.0" style="-fx-background-color: a2d9ce;">
+         <buttons>
+            <Button fx:id="ventas" mnemonicParsing="false" text="Ventas" />
+            <Button fx:id="productos" mnemonicParsing="false" text="Productos" />
+            <Button fx:id="inventario" mnemonicParsing="false" text="Inventario" />
+            <Button fx:id="compras" mnemonicParsing="false" text="Compras" />
+            <Button fx:id="empleados" mnemonicParsing="false" text="Empleados" />
+            <Button fx:id="cortes" mnemonicParsing="false" text="Corte" />
+            <Button fx:id="facturas" mnemonicParsing="false" text="Facturas" />
+            <Button fx:id="reportes" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Reportes" />
+            <Button fx:id="configuracion" mnemonicParsing="false" text="Configuración" />
+         </buttons>
+      </ButtonBar>
+      <Pane prefHeight="33.0" prefWidth="899.0" style="-fx-background-color: #73c6b6;">
+         <children>
+            <Button fx:id="cerrarSesion" layoutX="774.0" layoutY="4.0" mnemonicParsing="false" onAction="#volverAlLogin" style="-fx-background-color: #138d75;" text="Cerrar sesión" textFill="#f8f8f8" />
+            <Label fx:id="fechaHora" layoutX="97.0" layoutY="8.0" text="Label" />
+            <Label fx:id="usuario" layoutX="687.0" layoutY="8.0" text="Label" />
+         </children>
+      </Pane>
+      <Pane fx:id="contPantallas" layoutY="76.0" prefHeight="441.0" prefWidth="899.0">
+         <children>
+            <Label layoutX="335.0" layoutY="112.0" text="Bienvenido!!">
+               <font>
+                  <Font name="Bodoni MT Black" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="299.0" layoutY="181.0" text="Almejor punto de ventas para farmacias">
+               <font>
+                  <Font name="Bodoni MT" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>
