@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
 <AnchorPane prefHeight="518.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.InicioEmpleadoController">
    <children>
       <Pane prefHeight="33.0" prefWidth="899.0" style="-fx-background-color: #73c6b6;">
@@ -18,13 +17,11 @@
       </Pane>
       <ButtonBar layoutY="35.0" prefHeight="40.0" prefWidth="899.0" style="-fx-background-color: a2d9ce;">
         <buttons>
-          <Button fx:id="ventasEm" mnemonicParsing="false" text="Ventas" />
-            <Button fx:id="productosEm" mnemonicParsing="false" text="Productos" />
-            <Button fx:id="inventarioEm" mnemonicParsing="false" text="Inventario" />
-            <Button fx:id="comprasEm" mnemonicParsing="false" text="Compras" />
-            <Button fx:id="corteEm" mnemonicParsing="false" text="Corte" />
-            <Button fx:id="facturasEm" mnemonicParsing="false" text="Facturas" />
-            <Button fx:id="configEm" mnemonicParsing="false" text="Configuración" />
+          <Button fx:id="ventasEm" mnemonicParsing="false" onAction="#manejarClicBoton" text="Ventas" />
+            <Button fx:id="productosEm" mnemonicParsing="false" onAction="#manejarClicBoton" text="Productos" />
+            <Button fx:id="corteEm" mnemonicParsing="false" onAction="#manejarClicBoton" text="Corte" />
+            <Button fx:id="facturasEm" mnemonicParsing="false" onAction="#manejarClicBoton" text="Facturas" />
+            <Button fx:id="configEm" mnemonicParsing="false" onAction="#manejarClicBoton" text="Configuración" />
         </buttons>
       </ButtonBar>
       <Pane fx:id="contenedorPantallasEm" layoutY="75.0" prefHeight="444.0" prefWidth="899.0" />

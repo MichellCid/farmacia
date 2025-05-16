@@ -20,7 +20,7 @@
             <TableColumn fx:id="colUbiP" prefWidth="70.00006103515625" text="Ubicación" />
         </columns>
       </TableView>
-      <TextField fx:id="buscadorP" layoutX="130.0" layoutY="78.0" prefHeight="25.0" prefWidth="214.0" />
+      <TextField fx:id="buscadorP" layoutX="130.0" layoutY="78.0" prefHeight="25.0" prefWidth="272.0" />
       <TextField fx:id="codigoP" layoutX="652.0" layoutY="39.0" prefHeight="25.0" prefWidth="202.0" />
       <TextField fx:id="nombreP" layoutX="652.0" layoutY="69.0" prefHeight="25.0" prefWidth="202.0" />
       <TextField fx:id="pcP" layoutX="652.0" layoutY="176.0" prefHeight="25.0" prefWidth="202.0" />
@@ -39,9 +39,11 @@
       <Label layoutX="562.0" layoutY="280.0" text="Categoria" />
       <Label layoutX="562.0" layoutY="314.0" text="Ubicación" />
       <Label layoutX="560.0" layoutY="350.0" text="Caducidad" />
-      <Button fx:id="editarP" layoutX="93.0" layoutY="395.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Editar producto" textFill="#f8f8f8" onAction="#cargarProductoEnFormulario"/>
-      <Button fx:id="eliminarP" layoutX="315.0" layoutY="395.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Eliminar producto" textFill="#f8f8f8" onAction="#eliminarProducto" />
-      <Button fx:id="agregarP" layoutX="774.0" layoutY="395.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Agregar producto" textFill="#f8f8f8" onAction="#agregarProducto"/>
-      <Button fx:id="guardarCambiosP" layoutX="638.0" layoutY="395.0" mnemonicParsing="false" onAction="#guardarCambios" style="-fx-background-color: #138d75;" text="Guardar Cambios" textFill="#f9f9f9"  />
+      <Button fx:id="editarP" layoutX="61.0" layoutY="395.0" mnemonicParsing="false" onAction="#cargarProductoEnFormulario" style="-fx-background-color: #138d75;" text="Editar producto" textFill="#f8f8f8" />
+      <Button fx:id="eliminarP" layoutX="193.0" layoutY="395.0" mnemonicParsing="false" onAction="#eliminarProducto" style="-fx-background-color: #138d75;" text="Eliminar producto" textFill="#f8f8f8" />
+      <Button fx:id="agregarP" layoutX="774.0" layoutY="395.0" mnemonicParsing="false" onAction="#agregarProducto" style="-fx-background-color: #138d75;" text="Agregar producto" textFill="#f8f8f8" />
+      <Button fx:id="guardarCambiosP" layoutX="638.0" layoutY="395.0" mnemonicParsing="false" onAction="#guardarCambios" style="-fx-background-color: #138d75;" text="Guardar cambios" textFill="#f9f9f9" />
+      <Label layoutX="82.0" layoutY="82.0" text="Buscar" />
+      <Button fx:id="detallesP" layoutX="337.0" layoutY="395.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Detalles producto" textFill="#f8f8f8" />
    </children>
 </AnchorPane>

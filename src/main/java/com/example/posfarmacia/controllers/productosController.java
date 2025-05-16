@@ -41,6 +41,23 @@ public class productosController {
 
         tablaProductos.setItems(listaProductos);
 
+        tablaProductos.setRowFactory(tv -> new TableRow<producto>() {
+            @Override
+            protected void updateItem(producto item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item == null || empty) {
+                    setStyle("");
+                } else {
+                    if (item.getStock() <= 5) {
+                        setStyle("-fx-background-color: #ffb3b3;"); // rojo claro
+                    } else {
+                        setStyle("");
+                    }
+                }
+            }
+        });
+
+
         // Cargar productos existentes
         cargarProductos();
 
@@ -245,8 +262,8 @@ public class productosController {
             stmt.setDouble(4, Double.parseDouble(pcP.getText()));
             stmt.setDouble(5, Double.parseDouble(pvP.getText()));
             stmt.setInt(6, Integer.parseInt(stockP.getText()));
-            stmt.setString(7, stockP.getText());
-            stmt.setString(8, stockP.getText());
+            stmt.setString(7, catP.getText());
+            stmt.setString(8, ubiP.getText());
             stmt.setInt(9, seleccionado.getId());
 
             stmt.executeUpdate();

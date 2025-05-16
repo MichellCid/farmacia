@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="441.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.ProductosEmpleado">
+   <children>
+      <Button layoutX="722.0" layoutY="386.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Agregar producto" textFill="#f8f8f8" />
+      <Button fx:id="detallesPEm" layoutX="227.0" layoutY="386.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Detalles del producto" textFill="#f8f8f8" />
+      <Label layoutX="27.0" layoutY="35.0" text="Buscar" />
+      <TableView fx:id="TProductosEm" layoutX="27.0" layoutY="112.0" prefHeight="259.0" prefWidth="529.0">
+        <columns>
+          <TableColumn fx:id="colIDPEm" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colCodPEm" prefWidth="75.0" text="Código" />
+            <TableColumn fx:id="colNomPEm" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colDesPEm" prefWidth="75.0" text="Descripción" />
+            <TableColumn fx:id="colStockPEm" prefWidth="75.0" text="Disponible" />
+            <TableColumn fx:id="colUbiPEm" prefWidth="75.0" text="Ubicación" />
+            <TableColumn fx:id="colPrecioPEm" prefWidth="75.0" text="Precio" />
+        </columns>
+      </TableView>
+      <TextField fx:id="bucarPEm" layoutX="75.0" layoutY="31.0" prefHeight="25.0" prefWidth="314.0" />
+      <Button fx:id="actualizarTEm" layoutX="431.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Actualizar Productos" textFill="#f8f8f8" />
+      <Label layoutX="633.0" layoutY="35.0" text="Código" />
+      <Label layoutX="628.0" layoutY="65.0" text="Nombre" />
+      <Label layoutX="613.0" layoutY="113.0" text="Descripción" />
+      <Label layoutX="611.0" layoutY="196.0" text="Precio venta" />
+      <Label layoutX="600.0" layoutY="163.0" text="Precio compra" />
+      <Label layoutX="638.0" layoutY="233.0" text="Stock" />
+      <Label layoutX="622.0" layoutY="269.0" text="Categoría" />
+      <Label layoutX="622.0" layoutY="302.0" text="Ubicación" />
+      <Label layoutX="622.0" layoutY="334.0" text="Caducidad" />
+      <TextField fx:id="codPEm" layoutX="703.0" layoutY="31.0" />
+      <TextField fx:id="nomPEm" layoutX="703.0" layoutY="61.0" />
+      <TextField fx:id="pcPEm" layoutX="703.0" layoutY="159.0" />
+      <TextArea fx:id="desPEm" layoutX="703.0" layoutY="93.0" prefHeight="58.0" prefWidth="149.0" />
+      <TextField fx:id="pvPEm" layoutX="703.0" layoutY="192.0" />
+      <TextField fx:id="catPEm" layoutX="703.0" layoutY="265.0" />
+      <TextField fx:id="ubiPEm" layoutX="703.0" layoutY="298.0" />
+      <TextField fx:id="stockPEm" layoutX="703.0" layoutY="229.0" />
+      <TextField fx:id="cadPEm" layoutX="703.0" layoutY="330.0" />
+   </children>
+</AnchorPane>

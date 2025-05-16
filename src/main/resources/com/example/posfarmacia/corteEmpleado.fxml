@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="441.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.CorteEmpleadoController">
+   <children>
+      <Label layoutX="540.0" layoutY="272.0" text="Total Registrado" />
+      <Label layoutX="638.0" layoutY="280.0" text="Label" />
+      <Label layoutX="464.0" layoutY="183.0" text="Label" />
+      <Label layoutX="179.0" layoutY="369.0" text="Excelente trabajo!!" />
+      <TableView fx:id="ventasUsAct" layoutX="38.0" layoutY="67.0" prefHeight="258.0" prefWidth="379.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Button layoutX="528.0" layoutY="328.0" mnemonicParsing="false" text="Cerrar turno" />
+      <Button layoutX="500.0" layoutY="46.0" mnemonicParsing="false" text="Iniciar turno" />
+      <ComboBox layoutX="502.0" layoutY="167.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

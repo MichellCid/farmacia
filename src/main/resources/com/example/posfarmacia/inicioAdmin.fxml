@@ -7,13 +7,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="518.0" prefWidth="842.0" style="-fx-background-color: 73c6b6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.InicioAdminController">
+<AnchorPane prefHeight="518.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.InicioAdminController">
    <children>
       <ButtonBar layoutY="35.0" prefHeight="40.0" prefWidth="899.0" style="-fx-background-color: a2d9ce;">
          <buttons>
             <Button fx:id="ventas" mnemonicParsing="false" text="Ventas" />
             <Button fx:id="productos" mnemonicParsing="false" text="Productos" />
-            <Button fx:id="inventario" mnemonicParsing="false" text="Inventario" />
             <Button fx:id="compras" mnemonicParsing="false" text="Compras" />
             <Button fx:id="empleados" mnemonicParsing="false" text="Empleados" />
             <Button fx:id="cortes" mnemonicParsing="false" text="Corte" />
@@ -36,7 +35,7 @@
                   <Font name="Bodoni MT Black" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="299.0" layoutY="181.0" text="Almejor punto de ventas para farmacias">
+            <Label layoutX="299.0" layoutY="181.0" text="Al mejor punto de ventas para farmacias">
                <font>
                   <Font name="Bodoni MT" size="18.0" />
                </font>

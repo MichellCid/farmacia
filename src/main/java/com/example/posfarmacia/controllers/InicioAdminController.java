@@ -18,7 +18,7 @@ public class InicioAdminController {
 
     @FXML private Button ventas;
     @FXML private Button productos;
-    @FXML private Button inventario;
+    //@FXML private Button inventario;
     @FXML private Button compras;
     @FXML private Button empleados;
     @FXML private Button cortes;
@@ -37,7 +37,7 @@ public class InicioAdminController {
         // Configura acciones para cada botón
         ventas.setOnAction(e -> cargarVista("ventas.fxml"));
         productos.setOnAction(e -> cargarVista("productos.fxml"));
-        inventario.setOnAction(e -> cargarVista("inventario.fxml"));
+        //inventario.setOnAction(e -> cargarVista("inventario.fxml"));
         compras.setOnAction(e -> cargarVista("compras.fxml"));
         empleados.setOnAction(e -> cargarVista("empleados.fxml"));
         cortes.setOnAction(e -> cargarVista("cortes.fxml"));

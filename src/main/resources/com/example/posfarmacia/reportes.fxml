@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="441.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.ReportesController">
+   <children>
+      <Button layoutX="166.0" layoutY="67.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Ventas" textFill="#f8f8f8" />
+      <Button layoutX="166.0" layoutY="110.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Ingresos" textFill="#f8f8f8" />
+      <Button layoutX="166.0" layoutY="164.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Productos" textFill="#f8f8f8" />
+      <Button layoutX="171.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Compras" textFill="#f8f8f8" />
+      <Button layoutX="171.0" layoutY="289.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="52.0" style="-fx-background-color: #138d75;" text="Ventas" textFill="#f8f8f8" />
+      <Button layoutX="379.0" layoutY="208.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="General" textFill="#f8f8f8" />
+   </children>
+</AnchorPane>
