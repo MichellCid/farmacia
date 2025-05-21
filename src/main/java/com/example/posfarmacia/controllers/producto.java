@@ -14,6 +14,7 @@ public class producto {
     private String categoria;
     private String ubicacion;
     private LocalDate fechaCaducidad;
+    private boolean estado;
 
         // Constructor, getters y setters...
 
@@ -22,7 +23,7 @@ public class producto {
 
     public producto(int id, String codigo, String nombre,
                     String descripcion, double precioCompra, double precioVenta,
-                    int stock, String categoria, String ubicacion, LocalDate fechaCaducidad) {
+                    int stock, String categoria, String ubicacion, LocalDate fechaCaducidad, boolean estado) {
         this.id = id;
         this.codigo = codigo;
         this.nombre = nombre;
@@ -33,6 +34,7 @@ public class producto {
         this.categoria = categoria;
         this.ubicacion = ubicacion;
         this.fechaCaducidad = fechaCaducidad;
+        this.estado = estado;
     }
 
     public producto(String codigo, String nombre,
@@ -49,6 +51,26 @@ public class producto {
         this.ubicacion = ubicacion;
         this.fechaCaducidad = fechaCaducidad;
     }
+
+    public producto(String codigo, String nombre, String descripcion, double precioVenta, int stock, String ubicacion) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precioVenta = precioVenta;
+        this.stock = stock;
+        this.ubicacion = ubicacion;
+    }
+
+    public producto(int id, String codigo, String nombre, String descripcion, double precioVenta, int stock, String ubicacion) {
+        this.id = id;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precioVenta = precioVenta;
+        this.stock = stock;
+        this.ubicacion = ubicacion;
+    }
+
 
     public int getId() {
         return id;
@@ -128,5 +150,13 @@ public class producto {
 
     public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 }
