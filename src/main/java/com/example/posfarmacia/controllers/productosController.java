@@ -12,6 +12,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.Optional;
 import com.example.posfarmacia.controllers.conexionBD;
+import javafx.scene.input.KeyEvent;
 
 public class productosController {
 
@@ -161,5 +162,47 @@ public class productosController {
         }
     }
 
+    @FXML
+    private void buscarProducto(KeyEvent event) {
+        String dato = buscadorP.getText();
+        if (dato == null || dato.trim().isEmpty()) {
+            cargarProductos();
+            return;
+        }
+
+        ObservableList<producto> listaFiltrada = FXCollections.observableArrayList();
+
+        try (Connection conn = conexionBD.getConexion()) {
+            String query = "SELECT * FROM productos WHERE estado = TRUE AND (" +
+                    "CAST(id AS CHAR) LIKE ? OR " +
+                    "LOWER(codigo) LIKE ? OR " +
+                    "LOWER(nombre) LIKE ?)";
+
+            PreparedStatement stmt = conn.prepareStatement(query);
+            String filtro = "%" + dato.toLowerCase() + "%";
+            stmt.setString(1, filtro);
+            stmt.setString(2, filtro);
+            stmt.setString(3, filtro);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                producto p = new producto(
+                        rs.getInt("id"),
+                        rs.getString("codigo"),
+                        rs.getString("nombre"),
+                        rs.getString("descripcion"),
+                        rs.getDouble("precio_venta"),
+                        rs.getInt("stock"),
+                        rs.getString("ubicacion")
+                );
+                listaFiltrada.add(p);
+            }
+
+            tablaProductos.setItems(listaFiltrada);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

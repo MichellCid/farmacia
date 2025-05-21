@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="441.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.posfarmacia.controllers.ProductosEmpleado">
    <children>
       <Button fx:id="agregarPEm" layoutX="722.0" layoutY="386.0" mnemonicParsing="false" onAction="#agregarProducto" style="-fx-background-color: #138d75;" text="Agregar producto" textFill="#f8f8f8" />
-      <Button fx:id="detallesPEm" layoutX="227.0" layoutY="386.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Detalles del producto" textFill="#f8f8f8" />
+      <Button fx:id="detallesPEm" layoutX="227.0" layoutY="386.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Detalles del producto" textFill="#f8f8f8" onAction="#mostrarVentanaDetalles" />
       <Label layoutX="27.0" layoutY="35.0" text="Buscar" />
       <TableView fx:id="TProductosEm" layoutX="27.0" layoutY="112.0" prefHeight="259.0" prefWidth="529.0">
         <columns>
@@ -25,7 +25,7 @@
             <TableColumn fx:id="colPrecioPEm" prefWidth="75.0" text="Precio" />
         </columns>
       </TableView>
-      <TextField fx:id="bucarPEm" layoutX="75.0" layoutY="31.0" prefHeight="25.0" prefWidth="314.0" />
+      <TextField fx:id="bucarPEm" layoutX="75.0" layoutY="31.0" prefHeight="25.0" prefWidth="314.0" onKeyReleased="#buscarProducto"/>
       <Button fx:id="actualizarTEm" layoutX="431.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #138d75;" text="Actualizar Productos" textFill="#f8f8f8" />
       <Label layoutX="633.0" layoutY="35.0" text="Código" />
       <Label layoutX="628.0" layoutY="65.0" text="Nombre" />

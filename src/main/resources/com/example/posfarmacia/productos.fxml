@@ -21,7 +21,7 @@
             <TableColumn fx:id="colUbiP" prefWidth="70.00006103515625" text="Ubicación" />
         </columns>
       </TableView>
-      <TextField fx:id="buscadorP" layoutX="130.0" layoutY="78.0" prefHeight="25.0" prefWidth="272.0" />
+      <TextField fx:id="buscadorP" layoutX="130.0" layoutY="78.0" prefHeight="25.0" prefWidth="272.0" onKeyReleased="#buscarProducto"/>
       <TextField fx:id="codigoP" layoutX="652.0" layoutY="39.0" prefHeight="25.0" prefWidth="202.0" />
       <TextField fx:id="nombreP" layoutX="652.0" layoutY="69.0" prefHeight="25.0" prefWidth="202.0" />
       <TextField fx:id="pcP" layoutX="652.0" layoutY="176.0" prefHeight="25.0" prefWidth="202.0" />

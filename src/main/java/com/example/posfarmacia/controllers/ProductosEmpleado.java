@@ -3,10 +3,17 @@ package com.example.posfarmacia.controllers;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -173,6 +180,79 @@ public class ProductosEmpleado {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void buscarProducto(KeyEvent event) {
+        String dato = bucarPEm.getText();
+        if (dato == null || dato.trim().isEmpty()) {
+            cargarProductos();
+            return;
+        }
+
+        ObservableList<producto> listaFiltrada = FXCollections.observableArrayList();
+
+        try (Connection conn = conexionBD.getConexion()) {
+            String query = "SELECT * FROM productos WHERE estado = TRUE AND (" +
+                    "CAST(id AS CHAR) LIKE ? OR " +
+                    "LOWER(codigo) LIKE ? OR " +
+                    "LOWER(nombre) LIKE ?)";
+
+            PreparedStatement stmt = conn.prepareStatement(query);
+            String filtro = "%" + dato.toLowerCase() + "%";
+            stmt.setString(1, filtro);
+            stmt.setString(2, filtro);
+            stmt.setString(3, filtro);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                producto p = new producto(
+                        rs.getInt("id"),
+                        rs.getString("codigo"),
+                        rs.getString("nombre"),
+                        rs.getString("descripcion"),
+                        rs.getDouble("precio_venta"),
+                        rs.getInt("stock"),
+                        rs.getString("ubicacion")
+                );
+                listaFiltrada.add(p);
+            }
+
+            TProductosEm.setItems(listaFiltrada);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void mostrarVentanaDetalles() {
+        producto seleccionado = TProductosEm.getSelectionModel().getSelectedItem();
+        if (seleccionado == null) {
+            mostrarAlerta("Selecciona un producto para ver detalles.", Alert.AlertType.WARNING);
+            return;
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/posfarmacia/DetallesProducto.fxml"));
+            Parent root = loader.load();
+
+            DetallesProductoController controller = loader.getController();
+            controller.cargarDatos(seleccionado);
+
+            Stage stage = new Stage();
+            stage.setTitle("Detalles del Producto");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.initModality(Modality.APPLICATION_MODAL); // bloquea la ventana anterior
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarAlerta("Error al abrir la ventana de detalles.", Alert.AlertType.ERROR);
+        }
+    }
+
+
 
 
 }
